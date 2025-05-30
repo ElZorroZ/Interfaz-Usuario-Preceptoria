@@ -1,26 +1,14 @@
-*{
-    margin:0px;
-    padding:0px;
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: bold;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-}
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #2e60ca 0%, #9bcdff 100%);
+    color: #f2f5f8;
+  }
+  
 
-body{
-    background: linear-gradient(to bottom, #2E60CA 50%, #9BCDFF 50%);
 
-}
-
-header{
-    padding-top: 10px;
-    padding-left: 10px;
-    background-color: #F2F5F8;
-    width: 100%;
-    height: 50px;
-    grid-template-columns: 30% 20% 50% ;
-}
 
 #sistem_Name{
     color:#2E60CA; 

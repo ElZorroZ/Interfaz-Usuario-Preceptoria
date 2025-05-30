@@ -1,0 +1,117 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #2e60ca 0%, #9bcdff 100%);
+    color: #f2f5f8;
+  }
+  
+header{
+    padding-top: 10px;
+    padding-left: 10px;
+    background-color: linear-gradient(to bottom, #2e60ca 0%, #9bcdff 100%);
+    width: 100%;
+    height: 50px;
+    grid-template-columns: 30% 20% 50% ;
+}
+.page-container {
+    min-height: 100vh; /* Hace que el contenedor principal ocupe toda la altura de la ventana */
+    display: flex;
+    flex-direction: column;
+  }
+
+.buttons-container {
+    flex: 1; /* Esto asegura que el contenedor principal ocupe el espacio restante */
+    max-width: 270px;
+    margin: 80px auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    color: #2e60ca;
+    margin-left: 40px;
+  }
+
+
+  .buttons-container button {
+    width: 80%;
+    padding: 40px;
+    background-color: #3c64bc;
+    color: #f2f5f8;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 40px;
+  }
+
+  .lista {
+    margin-left: 20px; /* Mueve la lista a la derecha */
+    transform: translateY(-10px); /* Mueve hacia arriba */
+    list-style-type: circle; /* Viñetas circulares */
+}
+.register-container {
+    flex: 1; /* Esto asegura que el contenedor principal ocupe el espacio restante */
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    color: #2e60ca;
+    margin-right: 40px;
+    margin-top: -540px;
+  }
+
+  .register-container button {
+    width: 90%;
+    padding: 20px;
+    background-color: #3c64bc;
+    color: #f2f5f8;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .footer-info {
+    background-color: #2b3e58;
+    border-top: 4px solid black;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f2f5f8;
+  }
+  
+  .footer-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    font-family: 'Georgia', serif;
+    font-size: 0.9rem;
+  }
+  
+  .footer-logo {
+    height: 40px;
+    width: auto;
+  }
+  
+  .footer-info a {
+    color: #f2f5f8;
+    text-decoration: none;
+    font-weight: normal;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    margin: 0 10px;
+  }
+  
+  .footer-info a:hover {
+    text-decoration: underline;
+  }
