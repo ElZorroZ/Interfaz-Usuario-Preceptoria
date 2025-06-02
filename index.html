@@ -1,54 +1,45 @@
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index_style.css">
-    <title>Gestion Preceptores</title>
-</head>
-<body>
-    <div class="page-container">
-        <!-- Contenido principal -->
-        <a href="login.html"">
-        <button class="button-exit">Salir de la sesion</button>
-        </a>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Panel del Preceptor</title>
+        <link rel="stylesheet" href="index_styles.css" />
+    </head>
+    <body>
+        <div class="page-container">
+            <main class="register-container">
+                <h2>Bienvenido/a Preceptor</h2>
+                <p class="descripcion">Accedé a tu panel para gestionar estudiantes.</p>
 
-        <main class="buttons-container">
-          <h3>BOTONES</h3>
-          <button>Crear un certificado</button>
-          <button>Crear una autorización</button>
-          <button>Crear un boletin</button>
-        </main>
-
-        <main class="register-container">
-            <main class="register-adentro-container">
-                <h3>Cursos</h3>
-                <ul class="lista">
-                    <li>4°2 CSC</li>
-                    <a href="curso_Mostrar.html"">
-                    <button>5°3 CSO</button>
-                </a>
-                </ul>
-                <footer class="footer-nuevoCurso">
-                    <div class="footer-right">
-                    <a href="#">Crear un nuevo curso</a>
+                <form action="/login" method="POST">
+                    <div class="form-group">
+                        <label for="login-email">Correo institucional</label>
+                        <input type="email" id="login-email" name="email" placeholder="ejemplo.ejemplo@bue.edu.ar" required />
                     </div>
-                </footer>
+
+                    <div class="form-group">
+                        <label for="login-password">Contraseña</label>
+                        <input type="password" id="login-password" name="password" placeholder="••••••••" required />
+                    </div>
+
+                    <a href="/admin/admin_index.html" class="btn-principal">Iniciar Sesión</a>
+                </form>
+
+                <p class="texto-secundario">¿No tenés cuenta?</p>
+                <a href="/register/register.html" class="crear-cuenta-btn">Crear una cuenta</a>
             </main>
-        </main>
-    
-        <!-- Footer -->
-        <footer class="footer-info">
-          <div class="footer-right">
-            <img src="/img/Logo.png" alt="Logo" class="footer-logo" />
-            <span>© 2025 Chomchom</span>
-            <a href="#">Términos</a>
-            <a href="#">Privacidad</a>
-            <a href="#">Seguridad</a>
-            <a href="#">Contacto</a>
-          </div>
-        </footer>
-      </div>
-</body>
+
+            <footer class="footer-info">
+                <div class="footer-right">
+                    <img src="/img/logo.png" alt="Logo" class="footer-logo" />
+                    <span>© 2025 Chomchom</span>
+                    <a href="#">Términos</a>
+                    <a href="#">Privacidad</a>
+                    <a href="#">Seguridad</a>
+                    <a href="#">Contacto</a>
+                </div>
+            </footer>
+        </div>
+    </body>
 </html>

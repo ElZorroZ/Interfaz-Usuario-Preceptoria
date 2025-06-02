@@ -1,42 +1,314 @@
+/* Reset mínimos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables de color */
+:root {
+  --color-principal: #2e60ca;
+  --color-fondo: #ffffff;
+  --color-texto: #2b3e58;
+  --color-header: #244ca4;
+  --color-hover: #1d3b72;
+  --color-borde: #d0d0d0;
+  --fondo-input: #f9f9f9;
+}
+
+/* Fondo de página y tipografía general */
 html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #2e60ca 0%, #9bcdff 100%);
-    color: #f2f5f8;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, var(--color-principal), #9bcdff);
+  color: var(--color-texto);
+}
+
+/* Contenedor principal centrado */
+.page-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Encabezado con título de curso */
+.header {
+  background-color: var(--color-fondo);
+  padding: 20px;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  font-size: 1.6rem;
+  text-align: center;
+  color: var(--color-header);
+}
+
+/* Contenedor de la tabla */
+.table-container {
+  background-color: var(--color-fondo);
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-top: -2px;
+  overflow-x: auto;
+  padding: 20px;
+}
+
+/* Tabla de asistencia */
+.asistencia-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.asistencia-table thead {
+  background-color: var(--color-header);
+}
+
+.asistencia-table th,
+.asistencia-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border: 1px solid var(--color-borde);
+  font-size: 0.95rem;
+}
+
+.asistencia-table th {
+  color: white;
+  font-weight: 600;
+}
+
+/* Columna de select centrado */
+.estado-cell {
+  text-align: center;
+}
+
+/* Filas alternadas para mayor legibilidad */
+.asistencia-table tbody tr:nth-child(even) {
+  background-color: #f1f5fb;
+}
+
+/* Hover sobre la fila */
+.asistencia-table tbody tr:hover {
+  background-color: #e0edf9;
+}
+
+/* Estilo de los <select> para elegir estado */
+.asistencia-table select {
+  width: 100%;
+  max-width: 180px;
+  padding: 8px 10px;
+  border: 1.5px solid var(--color-borde);
+  border-radius: 6px;
+  background-color: var(--fondo-input);
+  font-size: 0.95rem;
+  color: var(--color-texto);
+  appearance: none;
+  cursor: pointer;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.asistencia-table select:focus {
+  border-color: var(--color-principal);
+  box-shadow: 0 0 0 3px rgba(46, 96, 202, 0.2);
+  outline: none;
+}
+
+/* Botón de guardar asistencia */
+.boton-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.btn-guardar {
+  background-color: var(--color-principal);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-guardar:hover {
+  background-color: var(--color-hover);
+}
+
+/* Responsive: en pantallas chicas, reducir márgenes laterales */
+@media (max-width: 600px) {
+  .page-container {
+    padding: 10px;
   }
 
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-}
-table {
+  .asistencia-table th,
+  .asistencia-table td {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+
+  .btn-guardar {
     width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-th, td {
-    padding: 10px;
-    text-align: left;
-    border: 1px solid #ccc;
-}
-th {
-    background-color: #000000;
-    font-weight: bold;
-}
-.checkbox-column {
     text-align: center;
-    width: 100px;
+  }
 }
-input[type="checkbox"] {
-    transform: scale(1.5);
-    cursor: pointer;
+/* Reset mínimos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.enviar-btn {
-    text-decoration: none;
-    color: #007bff;
+
+/* Variables de color */
+:root {
+  --color-principal: #2e60ca;
+  --color-fondo: #ffffff;
+  --color-texto: #2b3e58;
+  --color-header: #244ca4;
+  --color-hover: #1d3b72;
+  --color-borde: #d0d0d0;
+  --fondo-input: #f9f9f9;
 }
-.enviar-btn:hover {
-    text-decoration: underline;
+
+/* Fondo de página y tipografía general */
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, var(--color-principal), #9bcdff);
+  color: var(--color-texto);
+}
+
+/* Contenedor principal centrado */
+.page-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Encabezado con título de curso */
+.header {
+  background-color: var(--color-fondo);
+  padding: 20px;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  font-size: 1.6rem;
+  text-align: center;
+  color: var(--color-header);
+}
+
+/* Contenedor de la tabla */
+.table-container {
+  background-color: var(--color-fondo);
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-top: -2px;
+  overflow-x: auto;
+  padding: 20px;
+}
+
+/* Tabla de asistencia */
+.asistencia-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.asistencia-table thead {
+  background-color: var(--color-header);
+}
+
+.asistencia-table th,
+.asistencia-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border: 1px solid var(--color-borde);
+  font-size: 0.95rem;
+}
+
+.asistencia-table th {
+  color: white;
+  font-weight: 600;
+}
+
+/* Columna de select centrado */
+.estado-cell {
+  text-align: center;
+}
+
+/* Filas alternadas para mayor legibilidad */
+.asistencia-table tbody tr:nth-child(even) {
+  background-color: #f1f5fb;
+}
+
+/* Hover sobre la fila */
+.asistencia-table tbody tr:hover {
+  background-color: #e0edf9;
+}
+
+/* Estilo de los <select> para elegir estado */
+.asistencia-table select {
+  width: 100%;
+  max-width: 180px;
+  padding: 8px 10px;
+  border: 1.5px solid var(--color-borde);
+  border-radius: 6px;
+  background-color: var(--fondo-input);
+  font-size: 0.95rem;
+  color: var(--color-texto);
+  appearance: none;
+  cursor: pointer;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.asistencia-table select:focus {
+  border-color: var(--color-principal);
+  box-shadow: 0 0 0 3px rgba(46, 96, 202, 0.2);
+  outline: none;
+}
+
+/* Botón de guardar asistencia */
+.boton-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.btn-guardar {
+  background-color: var(--color-principal);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-guardar:hover {
+  background-color: var(--color-hover);
+}
+
+.volver-container {
+  margin-bottom: 10px;
+}
+
+.btn-volver {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-volver:hover {
+  background-color: white;
+  color: var(--color-principal);
 }

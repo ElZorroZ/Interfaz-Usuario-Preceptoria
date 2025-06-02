@@ -1,43 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Registro</title>
-  <link rel="stylesheet" href="register_styles.css" />
-</head>
-<body>
-  <div class="page-container">
-    <!-- Contenido principal -->
-    <main class="register-container">
-      <h2>Crear una cuenta</h2>
-      <form id="registroForm">
-        <input type="text" name="nombre" placeholder="Nombre" required />
-        <input type="text" name="apellido" placeholder="Apellido" required />
-        <input type="email" name="email" placeholder="Correo electrónico" required />
-        <input type="password" name="password" placeholder="Contraseña" required />
-        <label for="escuelasL">Escuelas</label>
-        <select id="escuela" name="escuelas" required>
-          <option value="">Seleccionar Escuela</option>
-          <option value="ETN3">Escuela Técnica N°3 Maria Sanchez de Thompson</option>
-          <option value="ETN1">Escuela Técnica N°1 Otto Krause</option>
-        </select>
-        <button type="submit">Registrarse</button>
-      </form>
-      <p>¿Ya tenés una cuenta? <a href="login.html">Iniciar sesión</a></p>
-    </main>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro</title>
+    <link rel="stylesheet" href="register_styles.css" />
+  </head>
+  <body>
+    <div class="page-container">
 
-    <!-- Footer -->
-    <footer class="footer-info">
-      <div class="footer-right">
-        <img src="/img/Logo.png" alt="Logo" class="footer-logo" />
-        <span>© 2025 Chomchom</span>
-        <a href="#">Términos</a>
-        <a href="#">Privacidad</a>
-        <a href="#">Seguridad</a>
-        <a href="#">Contacto</a>
-      </div>
-    </footer>
-  </div>
-</body>
+      <main class="register-container">
+        <h2>Crear una cuenta</h2>
+        <form id="registroForm">
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required />
+          </div>
+
+          <div class="form-group">
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" name="apellido" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+
+          <div class="form-group">
+            <label for="escuela">Escuela</label>
+            <select id="escuela" name="escuelas" required>
+              <option value="">Seleccionar Escuela</option>
+              <option value="ETN3">Escuela Técnica N°3 Maria Sanchez de Thompson</option>
+              <option value="ETN1">Escuela Técnica N°1 Otto Krause</option>
+            </select>
+          </div>
+
+          <button type="submit">Registrarse</button>
+        </form>
+        <p>¿Ya tenés una cuenta? <a href="/login/login.html">Iniciar sesión</a></p>
+      </main>
+
+      <footer class="footer-info">
+        <div class="footer-right">
+          <img src="/img/logo.png" alt="Logo" class="footer-logo" />
+          <span>© 2025 Chomchom</span>
+          <a href="#">Términos</a>
+          <a href="#">Privacidad</a>
+          <a href="#">Seguridad</a>
+          <a href="#">Contacto</a>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
