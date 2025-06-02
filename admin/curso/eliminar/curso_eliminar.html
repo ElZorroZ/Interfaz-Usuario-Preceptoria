@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pantalla de curso</title>
+    <link rel="stylesheet" href="curso_eliminar_styles.css" />
+    </head>
+    <body>
+        <div class="page-container">
+            <header class="header">
+                <h1>Cursos Disponibles</h1>
+            </header>
+            <main class="table-container">
+                <table class="asistencia-table">
+                    <thead>
+                        <tr>
+                            <th>Curso</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="estado-cell">
+                                <select name="cursoOpc" aria-label="Select de Curso">
+                                    <option value="4to2da">4°2 CSC</option>
+                                    <option value="5to3era">5°3</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+               
+                <div class="boton-container">
+                    <button class="btn-guardar" type="button">Eliminar curso</button>
+                </div>
+                <button class="btn-volver" onclick="location.href='/admin/admin_index.html'">Volver</button>
+            </main>
+        </div>
+    </body>
+</html>
