@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="admin_index_styles.css" />
+    <title>Gestión Preceptores</title>
+  </head>
+  <body>
+    <div class="page-container">
+      
+      <div class="top-bar">
+        <a href="/index.html" class="btn-exit">Salir de la sesión</a>
+      </div>
+
+      <div class="volver-container">
+        <button class="btn-volver" onclick="window.history.back()">← Volver</button>
+      </div>
+
+      <div class="main-content">
+        <section class="buttons-container">
+          <h3>Acciones rápidas</h3>
+          <button>Crear certificado</button>
+          <button>Crear autorización</button>
+          <button>Crear boletín</button>
+        </section>
+
+        <section class="register-container">
+          <h3>Cursos</h3>
+          <ul class="lista">
+            <li>4°2 CSC</li>
+            <li><a href="/admin/curso/curso_Mostrar.html" class="course-link">5°3 CSO</a></li>
+          </ul>
+          <div class="footer-nuevoCurso">
+            <a href="#" class="link-crear-curso">Crear un nuevo curso</a>
+          </div>
+        </section>
+      </div>
+
+      <footer class="footer-info">
+        <div class="footer-right">
+          <img src="/img/Logo.png" alt="Logo" class="footer-logo" />
+          <span>© 2025 Chomchom</span>
+          <a href="#">Términos</a>
+          <a href="#">Privacidad</a>
+          <a href="#">Seguridad</a>
+          <a href="#">Contacto</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
