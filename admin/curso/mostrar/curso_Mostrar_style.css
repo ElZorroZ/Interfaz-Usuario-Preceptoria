@@ -6,19 +6,16 @@
 }
 
 /* Variables de color */
-  /* Variables de color */
-  :root {
-    --color-principal: #2e60ca;
-    --color-secundario: #3c64bc;
-    --color-claro: #f2f5f8;
-    --color-texto: #1c1c1c;
-    --color-fondo: #ffffff;
-    --color-texto: #2b3e58;
-    --color-header: #244ca4;
-    --color-hover: #1d3b72;
-    --color-borde: #d0d0d0;
-    --fondo-input: #f9f9f9;
-  }
+:root {
+  --color-principal: #2e60ca;
+  --color-fondo: #ffffff;
+  --color-texto: #2b3e58;
+  --color-header: #244ca4;
+  --color-hover: #1d3b72;
+  --color-borde: #d0d0d0;
+  --fondo-input: #f9f9f9;
+}
+
 /* Fondo de página y tipografía general */
 html, body {
   height: 100%;
@@ -50,19 +47,13 @@ html, body {
 
 /* Contenedor de la tabla */
 .table-container {
-  flex: 1;
-  min-width: 400px;
   background-color: var(--color-fondo);
-  border-radius: 12px;
+  border-radius: 0 0 8px 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-top: -2px;
+  overflow-x: auto;
   padding: 20px;
 }
-.page-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
 
 /* Tabla de asistencia */
 .asistencia-table {
@@ -130,51 +121,6 @@ html, body {
   margin-top: 20px;
 }
 
-.main-content {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-
-  .buttons-container {
-     width: 300px;
-    /* Para la altura, si querés que sea exacto */
-    height: 304px;  /* Para buttons-container */
-    /* O en el otro, register-container 246px (si quieres, podés hacer por separado) */
-    background-color: white;
-    color: var(--color-principal);
-    border-radius: 12px;
-    padding: 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    width: 300px;
-  }
-  
-  .buttons-container h3 {
-    margin-bottom: 20px;
-    font-size: 1.2rem;
-    text-align: center;
-  }
-  
-  .buttons-container button{
-    width: 100%;
-    padding: 16px;
-    background-color: var(--color-secundario);
-    color: var(--color-claro);
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-bottom: 20px;
-    transition: background-color 0.3s;
-  }
-  
-  .buttons-container button:hover {
-    background-color: #244ca4;
-  }
 .btn-guardar {
   background-color: var(--color-principal);
   color: white;
