@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Crear Autorización</title>
+    <link rel="stylesheet" href="autorizacion_crear_styles.css" />
+</head>
+<body>
+    <div class="main-content">
+        <section class="buttons-container">
+            <h3>Acciones rápidas</h3>
+            <button onclick="window.location.href='/admin/admin_index.html'">Menu principal</button>
+            <button onclick="window.location.href='/admin/curso/certificado/certificado_crear.html'">Crear certificado</button>
+            <button onclick="window.location.href='admin/curso/autorizacion/autorizacion_crear.html'">Crear autorización</button>
+            <button onclick="window.location.href='/admin/curso/boletin/boletin_crear_styles.html'">Crear boletín</button>
+        </section>
+    </div>
+
+    <div class="autorizacion-container">
+        <h2>Crear Autorización para Alumno</h2>
+
+        <form action="#" method="post">
+            <label for="alumno">Seleccionar Alumno:</label>
+            <select id="alumno" name="alumno" required>
+                <option value="" disabled selected>-- Seleccione un alumno --</option>
+                <option value="alumno1">Juan Pérez</option>
+                <option value="alumno2">María Gómez</option>
+                <option value="alumno3">Carlos Sánchez</option>
+            </select>
+
+            <label for="actividad">Actividad a autorizar:</label>
+            <input type="text" id="actividad" name="actividad" placeholder="Ej: Viaje educativo a la reserva ecológica" required />
+
+            <label for="texto-autorizacion">Texto de la Autorización:</label>
+            <textarea id="texto-autorizacion" name="texto-autorizacion" placeholder="Escribe aquí el texto de la autorización..." required></textarea>
+
+            <button type="submit" class="btn-guardar-certificado">Guardar Autorización</button>
+        </form>
+    </div>
+</body>
+</html>

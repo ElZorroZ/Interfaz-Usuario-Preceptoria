@@ -11,6 +11,14 @@
             <header class="header">
                 <h1>Cursos Disponibles</h1>
             </header>
+            <div class="main-content">
+                <section class="buttons-container">
+                  <h3>Acciones rápidas</h3>
+                  <button onclick="window.location.href='/admin/admin_index.html'">Menu principal</button>
+                    <button onclick="window.location.href='/admin/curso/certificado/certificado_crear.html'">Crear certificado</button>
+                    <button onclick="window.location.href='admin/curso/autorizacion/autorizacion_crear.html'">Crear autorización</button>
+                    <button onclick="window.location.href='/admin/curso/boletin/boletin_crear_styles.html'">Crear boletín</button>
+                </section>
             <main class="table-container">
                 <table class="asistencia-table">
                     <thead>
@@ -22,6 +30,7 @@
                         <tr>
                             <td class="estado-cell">
                                 <select name="cursoOpc" aria-label="Select de Curso">
+                                    <option value="" disabled selected>-- Seleccione un curso --</option>
                                     <option value="4to2da">4°2 CSC</option>
                                     <option value="5to3era">5°3</option>
                                 </select>
@@ -35,6 +44,7 @@
                 </div>
                 <button class="btn-volver" onclick="location.href='/admin/admin_index.html'">Volver</button>
             </main>
+            </div>
         </div>
     </body>
 </html>

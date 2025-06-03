@@ -126,11 +126,16 @@
   }
   .main-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around; /* o flex-start, según necesites */
     align-items: flex-start;
-    padding: 90px 20px 60px 0px; /* 0px a la izquierda */
+    padding: 40px 20px; /* igual que el original */
+    flex-wrap: wrap;
     gap: 20px;
+    width: 768px;    /* Para que tenga el mismo ancho exacto */
+    height: 384px;   /* Para que tenga la misma altura */
+    box-sizing: border-box; /* para que el padding no afecte al ancho */
   }
+
   
 
   .table-container {
@@ -140,6 +145,10 @@
   
 
   .buttons-container {
+     width: 300px;
+    /* Para la altura, si querés que sea exacto */
+    height: 304px;  /* Para buttons-container */
+    /* O en el otro, register-container 246px (si quieres, podés hacer por separado) */
     background-color: white;
     color: var(--color-principal);
     border-radius: 12px;
