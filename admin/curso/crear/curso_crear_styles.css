@@ -145,17 +145,15 @@
   
 
   .buttons-container {
-     width: 300px;
-    /* Para la altura, si querés que sea exacto */
-    height: 304px;  /* Para buttons-container */
-    /* O en el otro, register-container 246px (si quieres, podés hacer por separado) */
-    background-color: white;
-    color: var(--color-principal);
-    border-radius: 12px;
-    padding: 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    width: 300px;
+  width: 300px;
+  background-color: white;
+  color: var(--color-principal);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
   }
+
   
   .buttons-container h3 {
     margin-bottom: 20px;
