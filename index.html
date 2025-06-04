@@ -1,45 +1,26 @@
 <!DOCTYPE html>
-<html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Panel del Preceptor</title>
-        <link rel="stylesheet" href="index_styles.css" />
-    </head>
-    <body>
-        <div class="page-container">
-            <main class="register-container">
-                <h2>Bienvenido/a Preceptor</h2>
-                <p class="descripcion">Accedé a tu panel para gestionar estudiantes.</p>
-
-                <form action="/login" method="POST">
-                    <div class="form-group">
-                        <label for="login-email">Correo institucional</label>
-                        <input type="email" id="login-email" name="email" placeholder="ejemplo.ejemplo@bue.edu.ar" required />
-                    </div>
-
-                    <div class="form-group">
-                        <label for="login-password">Contraseña</label>
-                        <input type="password" id="login-password" name="password" placeholder="••••••••" required />
-                    </div>
-
-                    <a href="/admin/admin_index.html" class="btn-principal">Iniciar Sesión</a>
-                </form>
-
-                <p class="texto-secundario">¿No tenés cuenta?</p>
-                <a href="/register/register.html" class="crear-cuenta-btn">Crear una cuenta</a>
-            </main>
-
-            <footer class="footer-info">
-                <div class="footer-right">
-                    <img src="/img/logo.png" alt="Logo" class="footer-logo" />
-                    <span>© 2025 Chomchom</span>
-                    <a href="#">Términos</a>
-                    <a href="#">Privacidad</a>
-                    <a href="#">Seguridad</a>
-                    <a href="#">Contacto</a>
-                </div>
-            </footer>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+        content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index_style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>PreSis</h1>
         </div>
-    </body>
+        <div id="header_logo">
+            <img src="img/logo_invertido.png" alt="logo" >
+        </div>
+        <nav>
+            <a href="/Interfaz-Usuario-Preceptoria-main/register/register.html" >Registrarse</a>
+            <a href="/login/login.html" >Iniciar Sesion</a>
+        </nav>
+    </header>
+    <main></main>
+    <footer></footer>
+</body>
 </html>
