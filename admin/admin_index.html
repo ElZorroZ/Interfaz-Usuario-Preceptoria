@@ -1,44 +1,39 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="admin_index_styles.css" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin_index_styles.css">
     <title>Gestión Preceptores</title>
-  </head>
-  <body>
-    <div class="page-container">
-      <header class="header">
+</head>
+<body>
+    <header class="header">
         <h1>Menu Inicial</h1>
-      </header>
-      <div class="top-bar">
-        <a href="/index.html" class="btn-exit">Salir de la sesión</a>
-      </div>
-
-      <div class="main-content">
+    </header>
+    <main>
         <section class="buttons-container">
           <h3>Acciones rápidas</h3>
             <button onclick="window.location.href='/admin/curso/certificado/certificado_crear.html'">Crear certificado</button>
             <button onclick="window.location.href='admin/curso/autorizacion/autorizacion_crear.html'">Crear autorización</button>
             <button onclick="window.location.href='/admin/curso/boletin/boletin_crear_styles.html'">Crear boletín</button>
+            <button id="btn-exit" onclick="window.location.href='/index.html'">Salir de la sesión</button>
         </section>
 
         <section class="register-container">
           <h3>Cursos</h3>
           <ul class="lista">
             <li>4°2 CSC</li>
-            <li><a href="/admin/curso/mostrar/curso_Mostrar.html" class="course-link">5°3 CSO</a></li>
+            <li>5°3 CSC</li>
+            <li><a href="/admin/curso/mostrar/curso_Mostrar.html" class="course-link">6°1 CSO</a></li>
           </ul>
+
           <div class="footer-nuevoCurso">
             <a href="/admin/curso/crear/curso_crear.html" class="link-crear-curso">Crear un nuevo curso</a>
-          </div>
-          <div class="footer-nuevoCurso">
             <a href="/admin/curso/eliminar/curso_eliminar.html" class="link-crear-curso">Eliminar curso</a>
           </div>
         </section>
-      </div>
-
-      <footer class="footer-info">
+    </main>
+    <footer class="footer-info">
         <div class="footer-right">
           <img src="/img/Logo.png" alt="Logo" class="footer-logo" />
           <span>© 2025 Chomchom</span>
@@ -47,7 +42,6 @@
           <a href="#">Seguridad</a>
           <a href="#">Contacto</a>
         </div>
-      </footer>
-    </div>
-  </body>
+    </footer>
+</body>
 </html>

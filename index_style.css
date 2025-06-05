@@ -22,7 +22,7 @@
 body {
     margin: 0;
     height: 100vh;
-    background: linear-gradient(to bottom,var(--color-principal),var(--color-secundario));
+    background: linear-gradient(to bottom,var(--color-principal),#9bcdff);
     margin: 0;
     padding: 0;
     height: 100%;
@@ -80,7 +80,7 @@ main{
     left: 0;
     width: 50%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, var(--color-secundario) 100%); 
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, var(--color-principal) 150%); 
 }
 .overlay-title {
   width: 40%;
@@ -92,12 +92,12 @@ main{
   color: white;
   font-size: 3vw;
   text-align: justify;
-  text-shadow: 1px 1px 20px rgba(0, 0, 0, 0.7);
+  text-shadow: 1px 1px 20px var(--color-principal);
   padding: 0 20px;
 }
 
 span{
-    color: var(--color-principal);
+    color: #9bcdff;
 }
 
 .register-container {
