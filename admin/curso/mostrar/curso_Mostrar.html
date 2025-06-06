@@ -1,82 +1,99 @@
 <!DOCTYPE html>
-<html lang="es">
-    <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pantalla de curso</title>
     <link rel="stylesheet" href="curso_Mostrar_style.css" />
-    </head>
-    <body>
-        <div class="page-container">
-            <header class="header">
-                <h1>Asistencia: 5°3 CSO</h1>
-            </header>
+</head>
+<body>
+    <header>
+        <h1>Asistencia</h1>
+    </header>
+    <main>
+        <section class="buttons-container">
+            <h3>Acciones rápidas</h3>
+            <button onclick="window.location.href='/admin/admin_index.html'">Volver al Menú</button>
+        </section>
 
-            <main class="table-container">
-                <table class="asistencia-table">
-                    <thead>
-                        <tr>
-                            <th>Nombre del alumno</th>
-                            <th>Estado de asistencia</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Juan Pérez</td>
-                            <td class="estado-cell">
-                                <select name="estado_juan" aria-label="Estado de Juan Pérez">
-                                    <option value="presente">Presente</option>
-                                    <option value="ausente">Ausente</option>
-                                    <option value="media_falta">Media falta</option>
-                                    <option value="aus_presencia">Ausencia con presencia</option>
-                                    <option value="cuarto_falta">¼ falta (15 min tarde)</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>María González</td>
-                            <td class="estado-cell">
-                                <select name="estado_maria" aria-label="Estado de María González">
-                                    <option value="presente">Presente</option>
-                                    <option value="ausente">Ausente</option>
-                                    <option value="media_falta">Media falta</option>
-                                    <option value="aus_presencia">Ausencia con presencia</option>
-                                    <option value="cuarto_falta">¼ falta (15 min tarde)</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Carlos López</td>
-                            <td class="estado-cell">
-                                <select name="estado_carlos" aria-label="Estado de Carlos López">
-                                    <option value="presente">Presente</option>
-                                    <option value="ausente">Ausente</option>
-                                    <option value="media_falta">Media falta</option>
-                                    <option value="aus_presencia">Ausencia con presencia</option>
-                                    <option value="cuarto_falta">¼ falta (15 min tarde)</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Ana Martínez</td>
-                            <td class="estado-cell">
-                                <select name="estado_ana" aria-label="Estado de Ana Martínez">
-                                    <option value="presente">Presente</option>
-                                    <option value="ausente">Ausente</option>
-                                    <option value="media_falta">Media falta</option>
-                                    <option value="aus_presencia">Ausencia con presencia</option>
-                                    <option value="cuarto_falta">¼ falta (15 min tarde)</option>
-                                </select>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+        <section class="table-container">
+            <div class="header">
+                <h1>Asistencia: 6°1 CSO</h1>
+            </div>
+            <table class="asistencia-table">
+                <thead>
+                    <tr>
+                        <th>Nombre del alumno</th>
+                        <th>Estado de asistencia</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Juan Pérez</td>
+                        <td class="estado-cell">
+                            <select name="estado_juan" aria-label="Estado de Juan Pérez">
+                                <option value="presente">Presente</option>
+                                <option value="ausente">Ausente</option>
+                                <option value="media_falta">Media falta</option>
+                                <option value="aus_presencia">Ausencia con presencia</option>
+                                <option value="cuarto_falta">¼ falta (15 min tarde)</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>María González</td>
+                        <td class="estado-cell">
+                            <select name="estado_maria" aria-label="Estado de María González">
+                                <option value="presente">Presente</option>
+                                <option value="ausente">Ausente</option>
+                                <option value="media_falta">Media falta</option>
+                                <option value="aus_presencia">Ausencia con presencia</option>
+                                <option value="cuarto_falta">¼ falta (15 min tarde)</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Carlos López</td>
+                        <td class="estado-cell">
+                            <select name="estado_carlos" aria-label="Estado de Carlos López">
+                                <option value="presente">Presente</option>
+                                <option value="ausente">Ausente</option>
+                                <option value="media_falta">Media falta</option>
+                                <option value="aus_presencia">Ausencia con presencia</option>
+                                <option value="cuarto_falta">¼ falta (15 min tarde)</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ana Martínez</td>
+                        <td class="estado-cell">
+                            <select name="estado_ana" aria-label="Estado de Ana Martínez">
+                                <option value="presente">Presente</option>
+                                <option value="ausente">Ausente</option>
+                                <option value="media_falta">Media falta</option>
+                                <option value="aus_presencia">Ausencia con presencia</option>
+                                <option value="cuarto_falta">¼ falta (15 min tarde)</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
 
-                <div class="boton-container">
-                    <button class="btn-guardar" type="button">Guardar asistencia</button>
-                </div>
-                <button class="btn-volver" onclick="location.href='/admin/admin_index.html'">Volver</button>
-            </main>
+            <div class="boton-container">
+                <button class="btn-guardar" type="button">Guardar asistencia</button>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer-info">
+        <div class="footer-right">
+          <img src="/img/Logo.png" alt="Logo" class="footer-logo" />
+          <span>© 2025 Chomchom</span>
+          <a href="#">Términos</a>
+          <a href="#">Privacidad</a>
+          <a href="#">Seguridad</a>
+          <a href="#">Contacto</a>
         </div>
-    </body>
+    </footer>
+</body>
 </html>
