@@ -1,70 +1,104 @@
 :root {
-    --color-principal: #2e60ca;
-    --color-secundario: #3c64bc;
-    --color-claro: #f2f5f8;
-    --color-texto: #2b3e58;
-    --color-fondo: #ffffff;
-    --color-header: #244ca4;
-    --color-hover: #1d3b72;
-    --color-borde: #d0d0d0;
-    --fondo-input: #f9f9f9;
+  --color-principal: #305e89;
+  --color-secundario: #9bcdff;
+  --color-claro: #f2f5f8;
+  --color-texto: #1c1c1c;
+
+  
+  --color-fondo: #ffffff;
+  --color-texto: #2b3e58;
+  --color-header: #244ca4;
+  --color-hover: #1d3b72;
+  --color-borde: #d0d0d0;
+  --fondo-input: #f9f9f9;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body {
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(to bottom, var(--color-principal), #9bcdff);
-    color: var(--color-texto);
-    margin: 0;
+
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, var(--color-principal), #9bcdff);
+  color: var(--color-texto);
+}
+
+header {
+    background-color: transparent;
     padding: 20px;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 30px;
-    flex-wrap: wrap;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 2;
 }
-
-.buttons-container {
-    width: 300px;
-    height: 304px;
-    background-color: var(--color-fondo);
-    color: var(--color-principal);
-    border-radius: 12px;
-    padding: 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.buttons-container h3 {
-    margin-bottom: 20px;
-    font-size: 1.2rem;
+  
+header h1 {
+    font-size: 1.6rem;
     text-align: center;
+    color: white;
 }
 
-.buttons-container button {
-    width: 100%;
-    padding: 16px;
-    background-color: var(--color-secundario);
-    color: var(--color-claro);
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-bottom: 20px;
-    transition: background-color 0.3s ease;
+
+
+/*=============================================================================*/
+main{
+    height: 80vh;
+    display: flex;
 }
 
-.buttons-container button:hover {
-    background-color: #244ca4;
+/*=============================================================================*/
+.buttons-container{
+  background-color: white;
+  color: var(--color-principal);
+  
+  padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 25%;
+  height: 100%;
 }
 
+.buttons-container h3{
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.buttons-container button{
+  width: 100%;
+  padding: 16px;
+  background-color: var(--color-principal);
+  color: var(--color-claro);
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.3s;
+  border: 3px solid transparent;
+}
+
+.buttons-container button:hover{
+  max-width: 100%;
+  background-color: white;
+  border: 3px solid var(--color-principal);
+  color: var(--color-principal);
+}
+/*=============================================================================*/
 .certificado-container {
-    background: var(--color-fondo);
-    border-radius: 12px;
-    padding: 30px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    width: 100%;
-    max-width: 500px;
+    background-color: white;
     color: var(--color-principal);
+    margin-left: 10%;
+    margin-top: 4%;
+    margin-right: 10%;
+    padding: 30px;
+    padding-top:20px ;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    height: 80%;
+    --radius-radio: 30px;
+    border-radius: var(--radius-radio) var(--radius-radio) var(--radius-radio) var(--radius-radio);
+    width: 60%;
 }
 
 .certificado-container h2 {
@@ -115,9 +149,52 @@ textarea {
     font-weight: 700;
     font-size: 1.1rem;
     cursor: pointer;
+    margin-top: -1%;
     transition: background-color 0.3s ease;
+    border: 3px solid transparent;
 }
 
 .btn-guardar-certificado:hover {
-    background-color: var(--color-hover);
+    max-width: 100%;
+    background-color: white;
+    border: 3px solid var(--color-principal);
+    color: var(--color-principal);
+}
+/*=============================================================================*/
+.footer-info {
+  background-color: #2b3e58;
+  border-top: 4px solid black;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-claro);
+  margin-top: auto;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  font-family: 'Georgia', serif;
+  font-size: 0.9rem;
+}
+
+.footer-logo {
+  height: 40px;
+  width: auto;
+}
+
+.footer-info a {
+  color: var(--color-claro);
+  text-decoration: none;
+  font-weight: normal;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  margin: 0 10px;
+}
+
+.footer-info a:hover {
+  text-decoration: underline;
 }
