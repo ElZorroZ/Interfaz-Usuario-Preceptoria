@@ -138,7 +138,43 @@ main{
   border: 3px solid var(--color-principal);
   color: var(--color-principal);
 }
+.footer-info {
+  background-color: #2b3e58;
+  border-top: 4px solid black;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-claro);
+  margin-top: auto;
+}
 
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  font-family: 'Georgia', serif;
+  font-size: 0.9rem;
+}
+
+.footer-logo {
+  height: 40px;
+  width: auto;
+}
+
+.footer-info a {
+  color: var(--color-claro);
+  text-decoration: none;
+  font-weight: normal;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  margin: 0 10px;
+}
+
+.footer-info a:hover {
+  text-decoration: underline;
+}
 @media screen and (max-width: 768px) {
   .footer-nuevoCurso {
     flex-direction: column;
