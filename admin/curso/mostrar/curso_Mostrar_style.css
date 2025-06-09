@@ -241,3 +241,160 @@ main{
 .footer-info a:hover {
   text-decoration: underline;
 }
+/* Ocultar el header móvil por defecto en escritorio */
+.header-mobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    height: auto;
+  }
+  .buttons-container {
+    display: none;
+  }
+
+  /* Header móvil visible */
+  .header-mobile {
+    display: block;
+    position: relative;
+    z-index: 1000;
+    background-color: var(--color-principal);
+    color: var(--color-claro);
+    padding: 15px;
+  }
+
+  .header-mobile-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Botones de menú y cerrar */
+  .menu-toggle,
+  .close-btn {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: var(--color-claro);
+    cursor: pointer;
+  }
+
+  /* Overlay del menú móvil */
+  .mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-principal);
+    color: var(--color-claro);
+    display: none;
+    flex-direction: column;
+    padding: 40px 20px;
+    z-index: 9999; /* más alto para asegurarse de que esté arriba */
+    transition: opacity 0.3s ease;
+    overflow-y: auto; /* para scroll si contenido es alto */
+  }
+
+  .mobile-menu-overlay.active {
+    display: flex;
+  }
+
+  .mobile-buttons-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .mobile-buttons-container h3 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .mobile-buttons-container button {
+    width: 100%;
+    padding: 15px;
+    background-color: white;
+    color: var(--color-principal);
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  .mobile-buttons-container button:hover {
+    background-color: #eee;
+  }
+  .buttons-container {
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+    border-bottom: 2px solid var(--color-borde);
+    padding: 20px;
+  }
+
+  .buttons-container h3 {
+    font-size: 1rem;
+  }
+
+  .buttons-container button {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  .table-container {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 10px;
+  }
+
+  .header {
+    padding: 10px;
+  }
+
+  .header h1 {
+    font-size: 1.3rem;
+  }
+
+  .asistencia-table {
+    font-size: 0.9rem;
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  .asistencia-table th, .asistencia-table td {
+    padding: 8px;
+  }
+
+  .asistencia-table select {
+    font-size: 0.9rem;
+    padding: 6px;
+    max-width: 100%;
+  }
+
+  .boton-container {
+    justify-content: center;
+    margin: 16px 0;
+  }
+
+  .btn-guardar {
+    width: 90%;
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .footer-info {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .footer-logo {
+    height: 30px;
+  }
+}

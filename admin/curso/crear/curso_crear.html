@@ -10,6 +10,20 @@
     <header class="header">
         <h1>Agregar Curso</h1>
     </header>
+    <header class="header-mobile">
+        <div class="header-mobile-top">
+          <h1>Menu</h1>
+          <button class="menu-toggle" onclick="toggleMobileMenu()">☰</button>
+        </div>
+
+        <div class="mobile-menu-overlay" id="mobileMenu">
+          <button class="close-btn" onclick="toggleMobileMenu()">✕</button>
+          <div class="mobile-buttons-container">
+            <h3>Acciones rápidas</h3>
+            <button onclick="window.location.href='/admin/admin_index.html'">Volver al Menú</button>
+          </div>
+        </div>
+    </header>
     <main>
         <section class="buttons-container">
             <h3>Acciones rápidas</h3>
@@ -54,5 +68,11 @@
           <a href="#">Contacto</a>
         </div>
     </footer>
+    <script>
+        function toggleMobileMenu() {
+          const menu = document.getElementById('mobileMenu');
+          menu.classList.toggle('active');
+        }
+    </script> 
 </body>
 </html>

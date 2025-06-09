@@ -25,6 +25,11 @@ html, body {
   background: linear-gradient(to bottom, var(--color-principal), #9bcdff);
   color: var(--color-texto);
 }
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
 header {
     background-color: transparent;
@@ -44,8 +49,9 @@ header h1 {
 
 /*=============================================================================*/
 main{
-    height: 80vh;
-    display: flex;
+  flex: 1;
+  display: flex;
+  padding: 40px 0;
 }
 
 /*=============================================================================*/
@@ -95,8 +101,9 @@ main{
     padding: 30px;
     padding-top:20px ;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    height: 80%;
     --radius-radio: 30px;
+    box-sizing: border-box;
+    padding: 30px 30px 20px 30px;
     border-radius: var(--radius-radio) var(--radius-radio) var(--radius-radio) var(--radius-radio);
     width: 60%;
 }
@@ -139,9 +146,10 @@ textarea {
 }
 
 .btn-guardar-certificado {
-    display: block;
+     display: block;
     width: 100%;
     padding: 16px;
+    margin-top: 20px; /* margen positivo */
     background-color: var(--color-principal);
     color: white;
     border: none;
@@ -149,9 +157,9 @@ textarea {
     font-weight: 700;
     font-size: 1.1rem;
     cursor: pointer;
-    margin-top: -1%;
     transition: background-color 0.3s ease;
     border: 3px solid transparent;
+    box-sizing: border-box;
 }
 
 .btn-guardar-certificado:hover {
@@ -197,4 +205,170 @@ textarea {
 
 .footer-info a:hover {
   text-decoration: underline;
+}
+/* Ocultar el header móvil por defecto en escritorio */
+.header-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+    /* Oculta el header de escritorio */
+    .header {
+      display: none;
+    }
+    .buttons-container {
+      display: none;
+    }
+  
+    /* Header móvil visible */
+    .header-mobile {
+      display: block;
+      position: relative;
+      z-index: 1000;
+      background-color: var(--color-principal);
+      color: var(--color-claro);
+      padding: 15px;
+    }
+  
+    .header-mobile-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    /* Botones de menú y cerrar */
+    .menu-toggle,
+    .close-btn {
+      font-size: 2rem;
+      background: none;
+      border: none;
+      color: var(--color-claro);
+      cursor: pointer;
+    }
+  
+    /* Overlay del menú móvil */
+    .mobile-menu-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: var(--color-principal);
+      color: var(--color-claro);
+      display: none;
+      flex-direction: column;
+      padding: 40px 20px;
+      z-index: 9999; /* más alto para asegurarse de que esté arriba */
+      transition: opacity 0.3s ease;
+      overflow-y: auto; /* para scroll si contenido es alto */
+    }
+  
+    .mobile-menu-overlay.active {
+      display: flex;
+    }
+  
+    .mobile-buttons-container {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .mobile-buttons-container h3 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    .mobile-buttons-container button {
+      width: 100%;
+      padding: 15px;
+      background-color: white;
+      color: var(--color-principal);
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+  
+    .mobile-buttons-container button:hover {
+      background-color: #eee;
+    }
+    .certificado-container {
+  width: 90%;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 15px;
+  box-sizing: border-box;
+  background-color: #f9f9f9; /* opcional: mejora la visual */
+  border-radius: 10px;
+}
+
+/* Ajuste para label + select + textarea */
+.certificado-container label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+.certificado-container select,
+.certificado-container textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Limitar la altura del textarea si es necesario */
+.certificado-container textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Botón responsive debajo del textarea */
+.btn-guardar-certificado {
+    padding: 12px 20px;
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    align-self: flex-start;
+}
+
+
+.btn-guardar-certificado:hover {
+  background-color: #004b91; /* tono más oscuro opcional */
+}
+
+    
+    
+    
+    #btn-exit-mobile {
+      background-color: red;
+      color: white;
+    }
+  
+    #btn-exit-mobile:hover {
+      background-color: rgb(196, 31, 31);
+    }
+  
+    /* Ajustes para footer en móvil */
+    .footer-nuevoCurso {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .footer-info {
+      flex-direction: column;
+      text-align: center;
+      gap: 15px;
+    }
+  
+    .footer-logo {
+      height: 30px;
+    }
 }
